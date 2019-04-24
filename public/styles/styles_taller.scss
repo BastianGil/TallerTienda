@@ -25,6 +25,24 @@ body{
     opacity: .6;
 }
 
+.producto{
+
+  width: 500px;
+  height: 500pxp;
+  display: flex;
+  flex-direction: column;
+  background-color: #0096c4;
+  margin: 1em;
+
+  & img{
+    width: 20%;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 .app{
     display: flex;
     height: auto;

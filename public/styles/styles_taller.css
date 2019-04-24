@@ -19,6 +19,28 @@ body {
   opacity: .6;
 }
 
+.producto {
+  width: 500px;
+  height: 500pxp;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0096c4;
+  margin: 1em;
+}
+
+.producto img {
+  width: 20%;
+}
+
+.producto:hover {
+  cursor: pointer;
+}
+
 .app {
   display: -webkit-box;
   display: -ms-flexbox;

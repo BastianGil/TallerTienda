@@ -18,6 +18,19 @@ app.get('/',function(req,res){
 res.sendFile(__dirname+'/public/home.html');
 });
 
+//4. Ruta de la tienda
+
+app.get('/tienda',function(req,res){
+
+    var contexto = {
+
+    };
+
+
+    res.render('tienda',contexto);
+});
+
+
 //3. Decirle por que puerto ecuchar  
 app.listen(3000, function(){
 console.log('Holi servidor');
