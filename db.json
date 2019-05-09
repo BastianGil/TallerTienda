@@ -1,0 +1,242 @@
+[
+    {
+
+        "ref": "p1",
+        "nombre": "Arms",
+        "imagen": "imgg1.jpg",
+        "categoria": "Combate",
+        "descripcion": "¡Prepárate para liarte a golpes con un elenco de personajes muy coloridos en ARMS para Nintendo Switch! En este juego de lucha único tendrás que utilizar los brazos mecánicos extensibles de los luchadores para atacar y derrotar a los rivales.",
+        "precio": 800,
+        "clasificacion":"12"
+    
+    },
+
+    {
+
+        "ref": "p2",
+        "nombre": "Super Smash Bros",
+        "imagen": "imgg2.jpg",
+        "categoria": "Combate",
+        "descripcion": "Luchadores y mundos de juego míticos colisionan en el enfrentamiento definitivo: ¡una nueva entrada de la serie Super Smash Bros. para Nintendo Switch! Nuevos luchadores, como los inkling de la serie Splatoon, Ridley de la serie Metroid, Simon Belmont de Castlevania y Canela de Animal Crossing, hacen su debut en Super Smash Bros. junto a todos los personajes de las entregas anteriores.",
+        "precio": 800,
+        "clasificacion":"12"
+    
+    },
+
+    {
+
+        "ref": "p3",
+        "nombre": "Yoshi's Crafted World",
+        "imagen": "imgg3.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Únete a los Yoshis y explora un mundo de manualidades repleto de secretos en Yoshi's Crafted World, en exclusiva para Nintendo Switch. Recorre el anverso y el reverso de niveles muy imaginativos, llenos de sorpresas y misterios, ya sea en solitario o en compañía de un amigo. ¡No dejes que Bebé Bowser y Kamek se salgan con la suya!",
+        "precio": 800,
+        "clasificacion":"3"
+    
+    },
+
+    {
+
+        "ref": "p4",
+        "nombre": "Pokémon: Let's Go, Pikachu!",
+        "imagen": "imgg4.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Viaja a través de la región de Kanto y vive mil aventuras en Pokémon: Let's Go, Pikachu! y Pokémon: Let's Go, Eevee! para Nintendo Switch. Comienza tu aventura como Entrenador Pokémon novato, y atrapa todo tipo de Pokémon con los que podrás combatir ¡e incluso trabar amistad!",
+        "precio": 800,
+        "clasificacion":"7"
+    
+    },
+
+    {
+
+        "ref": "p5",
+        "nombre": "New Super Mario Bros. U Deluxe",
+        "imagen": "imgg5.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Corre, salta y pega pisotones de campeonato a lo largo de más de 160 niveles en 2D de desplazamiento lateral. ¡New Super Mario Bros. U Deluxe para Nintendo Switch recupera el estilo de los juegos clásicos de Super Mario!Hasta cuatro jugadores* pueden aunar fuerzas para recoger monedas y derrotar a los enemigos de camino al banderín.",
+        "precio": 800,
+        "clasificacion":"3"
+    
+    },
+
+    {
+
+        "ref": "p6",
+        "nombre": "Diablo III: Eternal Collection",
+        "imagen": "imgg6.jpg",
+        "categoria": "Acción",
+        "descripcion": "Forma un grupo de cazademonios y amasa una cantidad ingente de tesoros donde y cuando quieras con Diablo III: Eternal Collection para Nintendo Switch. Hace eones, los ángeles y los demonios engendraron tu mundo en una unión prohibida. Ahora han venido a reclamarlo.",
+        "precio": 800,
+        "clasificacion":"16"
+    
+    },
+
+    {
+
+        "ref": "p7",
+        "nombre": "Super Mario Odyssey",
+        "imagen": "imgg7.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Acompaña a Mario en una enorme aventura en 3D por todo el planeta usando sus nuevas habilidades para recoger lunas que servirán de combustible a tu aeronave, la Odyssey. ¡Y entretanto, rescata a la princesa Peach de las garras de Bowser!",
+        "precio": 800,
+        "clasificacion":"7"
+    
+    },
+
+    {
+
+        "ref": "p8",
+        "nombre": "The Legend of Zelda: Breath of the Wild",
+        "imagen": "imgg8.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Tras un sueño de 100 años, Link despierta en un mundo que no es capaz de recordar. Nuestro héroe legendario deberá explorar un mundo vasto y peligroso, y recuperar su memoria antes de que Hyrule desaparezca para siempre. Link emprende un viaje para encontrar respuestas en el que solo dispondrá de aquello que encuentre por el camino.",
+        "precio": 800,
+        "clasificacion":"12"
+    
+    },
+
+    {
+
+        "ref": "p9",
+        "nombre": "Mario Kart 8 Deluxe",
+        "imagen": "imgg9.jpg",
+        "categoria": "Conducción",
+        "descripcion": "Nintendo Switch te permite jugar a Mario Kart cuando, donde y como quieras,tanto con la familia en la pantalla de la tele,como en el parque o en casa de un amigo.En el modo portátil, hasta ocho jugadores pueden conectarse para una partida multijugador local.",
+        "precio": 800,
+        "clasificacion":"3"
+    
+    },
+
+    {
+
+        "ref": "p10",
+        "nombre": "Splatoon 2",
+        "imagen": "imgg10.jpg",
+        "categoria": "FPS",
+        "descripcion": "Lucha por la supremacía territorial cuando quieras, donde quieras y como quieras en Splatoon 2, solo para Nintendo Switch. Las tradicionales batallas de 4 contra 4 vuelven en esta secuela junto con modos clásicos, nuevos escenarios, atuendos, armas y muchas más cosas. El objetivo de los combates territoriales es sencillo: reclama tanto territorio como puedas cubriéndolo con la tinta de tu equipo.",
+        "precio": 800,
+        "clasificacion":"7"
+    
+    },
+
+    {
+
+        "ref": "p11",
+        "nombre": "Super Mario Maker 2",
+        "imagen": "imgg11.jpg",
+        "categoria": "Estrategia",
+        "descripcion": "La amplia variedad de herramientas, objetos y funciones de Super Mario Maker 2 te permitirá jugar y crear los niveles de Super Mario con los que siempre has soñado, ¡en exclusiva para Nintendo Switch!La edición limitada de Super Mario Maker 2 estará disponible el mismo día del lanzamiento del juego, tanto en versión digital como en formato físico en tiendas. Incluye una copia del juego y una suscripción de 12 meses a Nintendo Switch Online.",
+        "precio": 800,
+        "clasificacion":"3"
+    
+    },
+
+    {
+
+        "ref": "p12",
+        "nombre": "Saints Row: The Third",
+        "imagen": "imgg12.jpg", 
+        "categoria": "Acción",
+        "descripcion": "Saints Row: The Third - The Full Package te permite controlar a los Saints en el cénit de su poder y viviendo una vida acorde.Por primera vez, puedes tener el capítulo más alocado de la saga Saints Row en la palma de tu mano con Nintendo Switch. Lucha en Steelport, una sórdida ciudad del pecado. Tu ciudad. Tus reglas.",
+        "precio": 800,
+        "clasificacion":"18"
+    
+    },
+
+    {
+
+        "ref": "p13",
+        "nombre": "Marvel Ultimate Alliance",
+        "imagen": "imgg13.jpg",
+        "categoria": "Aventura",
+        "descripcion": "La serie MARVEL ULTIMATE ALLIANCE regresa después de 10 años con un nuevo juego de rol de acción, en exclusiva para Nintendo Switch. Crea el equipo definitivo de superhéroes de Marvel con miembros de los Vengadores, los Guardianes de la Galaxia y la Patrulla-X, entre muchos otros. Alíate con amigos para poner freno a la destrucción galáctica del tirano cósmico Thanos y de sus señores de la guerra: la Orden Negra.",
+        "precio": 800,
+        "clasificacion":"16"
+    
+    },
+
+    {
+
+        "ref": "p14",
+        "nombre": "Fire Emblem: Three Houses",
+        "imagen": "imgg14.jpg",
+        "categoria": "Acción",
+        "descripcion": "¡Conviértete en el héroe de un mundo en peligro en Fire Emblem: Three Houses para Nintendo Switch! Fire Emblem: Three Houses se desarrolla en Fódlan, donde la Iglesia de Seiros detenta gran poder sobre la tierra y sus gentes. Asumirás el papel del personaje principal y deberás luchar en el campo de batalla, aunque también podrás moverte libremente e interactuar con otros personajes para forjar relaciones y reunir información.",
+        "precio": 800,
+        "clasificacion":"12"
+    
+    },
+
+    {
+
+        "ref": "p15",
+        "nombre": "Minecraft",
+        "imagen": "imgg15.jpg",
+        "categoria": "Estrategia",
+        "descripcion": "Minecraft es un juego de aventura y construcción con bloques.Explora mundos generados aleatoriamente y construye cosas maravillosas, desde una simple casa hasta un fastuoso castillo. Juega en modo creativo con recursos ilimitados o conoce el mundo a fondo con el modo supervivencia, fabricando armas y armaduras para deshacerte de peligrosas criaturas.",
+        "precio": 800,
+        "clasificacion":"7"
+    
+    },
+
+    {
+
+        "ref": "p16",
+        "nombre": "Mortal Kombat 11",
+        "imagen": "imgg16.jpg",
+        "categoria": "Combate",
+        "descripcion": "Mk vuelve mejor que nunca en la siguiente entrega de la icónica franquicia. Las Variantes de personajes personalizables, novedad de este juego, te dan un control sin precedentes sobre tus luchadores para adaptarlos a tus preferencias. El nuevo motor gráfico muestra a la perfección cada fractura de cráneo y cada desprendimiento ocular, lo que te acerca tanto al combate que puedes sentirlo.",
+        "precio": 800,
+        "clasificacion":"18"
+    
+    },
+
+    {
+
+        "ref": "p17",
+        "nombre": "Pokémon: Let's Go, Eevee!",
+        "imagen": "imgg17.jpg",
+        "categoria": "Aventura",
+        "descripcion": "En Pokémon: Let's Go, Eevee!, tu compañero Eevee no se despegará de tu lado, e irá creciendo y aprendiendo a medida que avances en el juego. Eevee puede aprender Técnicas Secretas y utilizarlas fuera de los combates para alcanzar ciertos lugares, como Tala, Surcacielos y Surcaaguas, al igual que movimientos exclusivos útiles para luchar.",
+        "precio": 800,
+        "clasificacion":"7"
+    
+    },
+
+    {
+
+        "ref": "p18",
+        "nombre": "Just Dance 2019",
+        "imagen": "imgg18.jpg",
+        "categoria": "Deportes",
+        "descripcion": "Estés donde estés, Just Dance 2019 hará que no pares de bailar, ¡con una increíble cantidad de contenido para toda la familia!Just Dance 2019 llega con más de 40 nuevas y divertidas canciones, y acceso a otras más de 400 canciones gracias a Just Dance Unlimited. ¡Todas las copias del juego incluyen 1 mes de acceso gratuito!Encontrarás grandes éxitos de ahora y de siempre, con más de 40 canciones",
+        "precio": 800,
+        "clasificacion":"3"
+    
+    },
+
+    {
+
+        "ref": "p19",
+        "nombre": "Donkey Kong Country: Tropical Freeze",
+        "imagen": "imgg19.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Únete a Donkey Kong, Diddy Kong, Dixie Kong, Cranky Kong y Funky Kong en una aventura en la que tendrán que nadar, volar de liana en liana, saltar y surfear por unas islas llenas de peligros, objetos ocultos, ¡y enemigos que dejan huella! Usa los movimientos únicos de cada personaje para explorar cada rincón de las islas y encontrar objetos especiales, ¡y salidas ocultas!",
+        "precio": 800,
+        "clasificacion":"3"
+    
+    },
+
+    {
+
+        "ref": "p20",
+        "nombre": "Crash Dummy",
+        "imagen": "imgg20.jpg",
+        "categoria": "Estrategia",
+        "descripcion": "Crash Dummy es un desafiante juego de plataformas en 2D con múltiples desafíos para poner a prueba incluso al jugador más experimentado. Explota, quema y congela tu camino a través de cada nivel. Salta largas distancias y escala por los muros al estilo ninja en esta aventura con una historia y un elenco de personajes entrañables.",
+        "precio": 800,
+        "clasificacion":"7"
+    
+    }
+
+]
