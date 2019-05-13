@@ -15,34 +15,49 @@
 
     <section class="tienda">
             <nav class="app__navegacion" id="nav-bar">
-                        <ul class="app__lista-nav">
+                <ul class="app__lista-nav">
                     <li class="app__item-navegacion-logo"> <img src="/imgs/logo-gris.png" alt="" width="40vh">   </li>
                     <li class="app__item-navegacion">SWITCH</li>
                     <li class="app__item-navegacion">JUEGOS</li>
                     <li class="app__item-navegacion">TIENDA</li>
                     <li class="app__item-navegacion">INICIO</li>
                 </ul>
-                </nav>
+            </nav>
 <div class="tienda__contenido">
 
     <div class="filtros">
         <ul class="filtros__lista">
+
+             {{#if esJuegos}}
+
             <li class="filtros__item1">CLASIFICACIÓN</li>
-            <li class="filtros__item2">3+ <input type="checkbox"></li>
-            <li class="filtros__item2">6+ <input type="checkbox"></li>
-            <li class="filtros__item2">9+ <input type="checkbox"></li>
-            <li class="filtros__item2">12+ <input type="checkbox"></li>
-            <li class="filtros__item2">15+ <input type="checkbox"></li>
-            <li class="filtros__item2">18+</li> 
+
+            <li class="filtros__item2">Hasta 3 años <input type="checkbox" onclick="location.href='/tienda/Juegos/?clasificacion=3';"></li>
+
+            <li class="filtros__item2">Hasta 7 años <input type="checkbox" onclick="location.href='/tienda/Juegos/?clasificacion=7';"></li>
+            <li class="filtros__item2">Hasta 12 años <input type="checkbox" value="12" onclick="location.href='/tienda/Juegos/?clasificacion=12';"></li>
+            
+            <li class="filtros__item2">Hasta 16 años <input type="checkbox" onclick="location.href='/tienda/Juegos/?clasificacion=16';"></li>
+
+            <li class="filtros__item2">Todos <input type="checkbox"  onclick="location.href='/tienda/Juegos/?clasificacion=18';"></li> 
 
             <li class="filtros__item1">GENERO</li>
-            <li class="filtros__item2">Acción <input type="checkbox"></li>
-            <li class="filtros__item2">Aventura <input type="checkbox" onclick="location.href='/tienda/Aventura';"></li>
-            <li class="filtros__item2">FPS <input type="checkbox"></li>
-            <li class="filtros__item2">Estrategia <input type="checkbox"></li>
-            <li class="filtros__item2">Conducción <input type="checkbox"></li>
-            <li class="filtros__item2">Combate <input type="checkbox"></li>
-            <li class="filtros__item2">Deportes <input type="checkbox"></li>
+            <li class="filtros__item2">Acción <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=Acción';"></li>
+
+            <li class="filtros__item2">Aventura <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=Aventura';"></li>
+
+            <li class="filtros__item2">Estrategia <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=Estrategia';"></li>
+            
+            <li class="filtros__item2">Conducción <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=Conducción';"></li>
+
+             <li class="filtros__item2">FPS <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=FPS';"></li>
+             
+            <li class="filtros__item2">Combate <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=Combate';"></li>
+             
+
+            <li class="filtros__item2">Deportes <input type="checkbox" onclick="location.href='/tienda/Juegos/?categoria=Deportes';"></li>
+
+            {{/if}}
 
             <li class="filtros__item1">COLOR</li>
             <li class="filtros__item2">Rojo <input type="checkbox"></li>
@@ -59,21 +74,22 @@
 
         <div class="filtro1">
            
-            <button class="filtro1__tipo">Juego</button>
-            <button class="filtro1__tipo">Mandos</button>
-            <button class="filtro1__tipo">Consolas</button>
+            <button class="filtro1__tipo" onclick="location.href='/tienda/Juegos/';">Juego</button>
+            <button class="filtro1__tipo" onclick="location.href='/tienda/Mandos/';">Mando</button>
+            <button class="filtro1__tipo" onclick="location.href='/tienda/Consolas/';">Consola</button>
         </div>
 
 
     {{#each listaProductos}}
-                <div class="producto" onclick="location.href='/tienda/{{this.ref}}';">
+                <div class="producto" >
                     <div class="producto__iconos">
 <i class="far fa-heart producto__corazon"></i>
 <i class="fas fa-plus producto__mas"></i>
                     </div>
 
                     <div style= "background-image: url(/imgs/{{this.imagen}})"
-                    
+
+                    onclick="location.href='/tienda/detalles/{{this.ref}}';"
                     
                      class="producto__img"></div>
 

@@ -50,34 +50,6 @@ productos.push({
 
 });
 
-productos.push({
-
-    ref: 'p2',
-    nombre: 'Kirby',
-    imagen: 'inkirby.png',
-    descripcion: 'lorem fvrvrvrv',
-    precio: '800'
-
-});
-
-productos.push({
-
-    ref: 'p3',
-    nombre: 'Kirby',
-    imagen: 'inkirby.png',
-    descripcion: 'lorem fvrvrvrv',
-    precio: '800'
-
-});
-productos.push({
-
-    ref: 'p4',
-    nombre: 'Kirby',
-    imagen: 'inkirby.png',
-    descripcion: 'lorem fvrvrvrv',
-    precio: '800'
-
-});
 
 //4. Ruta de la tienda
 
@@ -90,6 +62,7 @@ app.get('/tienda/', function(req, res) {
               
         var contexto = {
             listaProductos: docs,
+            
            
         };
         res.render('tienda',contexto);
@@ -97,25 +70,53 @@ app.get('/tienda/', function(req, res) {
  
  });
 
- //Ruta filtros
-app.get('/tienda/:categoria', function(req, res) {
+ 
+ //Ruta filtros1
+app.get('/tienda/:tipo?', function(req, res) {
+
+
+    console.log(req.params.tipo);
+
+    var query={};
+    if(req.params.tipo){
+        query.tipo= req.params.tipo;
+    }
+
+    if(req.query.clasificacion){
+        query.clasificacion= req.query.clasificacion;
+    }
+
+    if(req.query.categoria){
+        query.categoria= req.query.categoria;
+    }
 
 
     var juegos = clientdb.collection('juegos');
-    juegos.find({ categoria: req.params.categoria })
+
+    juegos.find(query)
+    
              .toArray(function(err, docs) {
-        var contexto = {
+        
+                var contexto = {
             listaProductos: docs,
+            tipo: req.params.tipo,
+            esJuegos: req.params.tipo == "Juegos",
           
         };
+       // console.log(docs);
+       
+       console.log(contexto.esJuegos);
+
         res.render('tienda',contexto);
     });
  
 });
 
 
+
+
 //6. Ruta dinamica del producto
-app.get('/tienda/juegos/:detalles',function(req,res){
+app.get('/tienda/detalles/:detalles',function(req,res){
 
   
     var contexto=null;
