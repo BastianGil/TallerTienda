@@ -86,8 +86,8 @@
     {{#each listaProductos}}
                 <div class="producto" >
                     <div class="producto__iconos">
-<i class="far fa-heart producto__corazon"></i>
-<i class="fas fa-plus producto__mas"></i>
+                        <i class="far fa-heart producto__corazon"></i>
+                        <i class="fas fa-plus producto__mas"></i>
                     </div>
 
                     <div style= "background-image: url(/imgs/{{this.imagen}})"
@@ -98,12 +98,13 @@
 
                 <div class="producto__info">
                         <div class="producto__titulo">
-                            <p class="producto__texto">{{this.nombre}}</p>
+                            <p class="producto__texto nombre">{{this.nombre}}</p>
                 </div>       
                 <div class="producto__valor ">             
-                    <p class="producto__texto">${{this.precio}}</p>
+                    <p class="producto__texto precio">${{this.precio}}</p>
 
                 </div>
+                <input class="categoria" type="hidden" value="{{this.categoria}}">
 
                 </div>
                 <div class="producto__estadisticas">
