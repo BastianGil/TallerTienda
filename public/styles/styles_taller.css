@@ -199,7 +199,25 @@ body {
 }
 
 .app__item-navegacion--carrito {
-  font-size: 1.7em;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app__NoProducto {
+  font-size: .8em;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ec0235;
+  border-radius: 20px;
+  margin: .4em 0em .4em 0;
+  padding: 0 .3em 0 .3em;
 }
 
 .app__item-navegacion:after {
@@ -1255,7 +1273,6 @@ span {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0 0 20em 0;
 }
 
 .filtro1 {
@@ -1311,12 +1328,12 @@ span {
   background-color: #cecece;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -0 0 2em 0;
+  padding: 0 0 10em 0;
 }
 
 .producto {
   width: 44%;
-  height: 18em;
+  height: 20em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
