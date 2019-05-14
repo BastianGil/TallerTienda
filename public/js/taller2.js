@@ -11,17 +11,26 @@ window.addEventListener("load" , function(){
     }
     //Agregar productos desde la tienda
     var tienda_agregar = document.querySelectorAll(".producto__mas");
+    var detalle_agregar = document.querySelector(".producto__mas");
+    var num__productos = document.querySelector(".app__NoProducto");
 
+
+    function actualizarCarrito(){
+        if(num__productos!=null){
+            num__productos.innerHTML=listaProductos.length;
+        }
+        localStorage.setItem("listaProductos",JSON.stringify(listaProductos));
+    }
+
+    actualizarCarrito();
     //Funcion que recorre los botones
     function tiendaBotones (btn){
         
 
-
-
         btn.addEventListener("click" , function(){ 
             var padre = btn.parentNode.parentNode;
-            var nombre=  padre.querySelector(".nombre").innertext;
-            var precio=  padre.querySelector(".precio").innertext;
+            var nombre=  padre.querySelector(".nombre").value;
+            var precio=  padre.querySelector(".precio").value;
             var categoria=  padre.querySelector(".categoria").value;
             var imagen=  padre.querySelector(".producto__img").style.backgroundImage;
             var imagenUrl = imagen.replace('url(','').replace(')','');
@@ -32,6 +41,10 @@ window.addEventListener("load" , function(){
                 categoria:categoria,
                 imagen:imagenUrl,
             };
+
+            listaProductos.push(producto);
+            actualizarCarrito();
+            console.log(listaProductos);
 
         });
     }

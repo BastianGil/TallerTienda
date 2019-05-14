@@ -21,7 +21,7 @@
                    
                     <li class="app__item-navegacion">TIENDA</li>
                     <li class="app__item-navegacion">INICIO</li>
-                    <li class="app__item-navegacion app__item-navegacion--carrito"> <i class="app__carrito" data-feather="shopping-cart"></i></li>
+                    <li class="app__item-navegacion app__item-navegacion--carrito"> <i class="app__carrito" data-feather="shopping-cart"></i> <p class="app__NoProducto"></p></li>
 
 
                 </ul>
@@ -98,13 +98,15 @@
 
                 <div class="producto__info">
                         <div class="producto__titulo">
-                            <p class="producto__texto nombre">{{this.nombre}}</p>
+                            <p class="producto__texto">{{this.nombre}}</p>
                 </div>       
                 <div class="producto__valor ">             
-                    <p class="producto__texto precio">${{this.precio}}</p>
+                    <p class="producto__texto">${{this.precio}}</p>
 
                 </div>
                 <input class="categoria" type="hidden" value="{{this.categoria}}">
+                <input class="nombre" type="hidden" value="{{this.nombre}}">
+                <input class="precio" type="hidden" value="{{this.precio}}">
 
                 </div>
                 <div class="producto__estadisticas">
