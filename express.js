@@ -154,6 +154,14 @@ app.get('/carrito/', function(req, res) {
 
  });
 
+ app.get('/checkout/', function(req, res) {
+             
+    var contexto = {
+             
+    };
+    res.render('check',contexto);
+    
+});
 
 //3. Decirle por que puerto ecuchar  
 app.listen(3000, function(){

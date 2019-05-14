@@ -168,6 +168,11 @@ body {
   margin: 0;
 }
 
+.app__carrito {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 .app__item-navegacion {
   list-style-type: none;
   margin-left: 10%;
@@ -1591,7 +1596,7 @@ span {
 
 .carrito__cantidad {
   color: white;
-  font-size: 1.4em;
+  font-size: 1.6em;
   padding: 0 .5em 0 .5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1606,7 +1611,7 @@ span {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 5em;
+  width: 6em;
   height: 2em;
   border-radius: 30px;
   border: solid 3px white;
@@ -1706,6 +1711,45 @@ span {
   border-radius: 30px;
   border: 0px;
   padding: 0 0 0 0;
+}
+
+.carrito__mas {
+  color: white;
+  margin: 0 -.4em 0 0;
+  width: 1.5em;
+  height: 1.2em;
+  border-radius: 30px;
+  font-size: 1.6em;
+  padding: 0 .4em 0.2em;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.carrito__mas:hover {
+  cursor: pointer;
+  color: #1b1c1f;
+  background-color: white;
+}
+
+.carrito__numero {
+  margin: 0 .2em 0 .2em;
+}
+
+.carrito__menos {
+  color: white;
+  margin: 0 0 0 -.4em;
+  width: 1.5em;
+  border-radius: 30px;
+  font-size: 1.6em;
+  padding: 0 .2em 0 .4em;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.carrito__menos:hover {
+  cursor: pointer;
+  color: #1b1c1f;
+  background-color: white;
 }
 
 @media (max-width: 600px) {
