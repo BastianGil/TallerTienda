@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
-<div class="app__fixed">
     <section class="tienda">
+        
+<div class="app__fixed">
             <nav class="app__navegacion" id="nav-bar">
                 <ul class="app__lista-nav">
                     <li class="app__item-navegacion-logo"> <img src="/imgs/logo-gris.png" alt="" width="40vh">   </li>
@@ -21,7 +22,6 @@
                    
                     <li class="app__item-navegacion">TIENDA</li>
                     <li class="app__item-navegacion">INICIO</li>
-                    
                     <li class="app__item-navegacion app__item-navegacion--carrito"> <i class="app__carrito" data-feather="shopping-cart"></i> <p class="app__NoProducto"></p></li>
 
 
@@ -29,10 +29,11 @@
             </nav>
 </div>
 <div class="tienda__fantasma"></div>
+
 <div class="tienda__contenido">
 
 
-
+<div class="flex-fixed">
 <div class="app__fixed">
     <div class="filtros">
         <ul class="filtros__lista">
@@ -77,7 +78,7 @@
         </ul>
     </div>
 </div>
-
+</div>
 <div class="producto__fantasma"></div>
 <div class="productos">
 
@@ -90,6 +91,7 @@
             <button class="filtro1__tipo" onclick="location.href='/tienda/Consolas/';">Consola</button>
         </div>
 
+<div class"producto__fantasma"></div>
     {{#each listaProductos}}
                 <div class="producto" >
                     <div class="producto__iconos">

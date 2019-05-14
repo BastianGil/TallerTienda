@@ -39,6 +39,7 @@ body{
     &__fixed{
       position: fixed;
       width: 100%;
+      z-index: 0;
     }
 
     &__header{
@@ -140,9 +141,9 @@ body{
         width: 100%;
         background-color: #0096c4;
         background-color: $gris-osccuro;
-        justify-content: center;
-        z-index: 100;
+        justify-content: center;  
         display: flex;
+        
 
         
     }
@@ -154,6 +155,7 @@ body{
       }
 
     &__lista-nav{
+      z-index: 30;    
         height: 100%;
         display: flex;
         width: 100%;
@@ -1067,15 +1069,20 @@ margin-top: 5vh;
     background-color: rgb(206, 206, 206);
     width: 100%;
     display: flex;
+    
   }
 
-
+.flex-fixed{
+  display: flex;
+  flex-direction: column;
+  
+}
 
 }
 
 .filtros{
   width: 25%;
-  height: auto;
+  height: 100vh;
   background-color:$gris-fondo ;
  
   &__lista{
@@ -1105,7 +1112,7 @@ margin-top: 5vh;
 .productos{
   display: flex;
   width: 75%;
-  height: 10vh;
+  height: 100vh;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -1147,7 +1154,8 @@ margin: 1em 6%  -1em 6%;
   background-color: rgb(206, 206, 206);
   flex-wrap: wrap; 
   padding: 0 0 10em 0;
-
+  z-index: 1;
+  
 }
 
 .producto{
@@ -1334,6 +1342,10 @@ color: #707070;
   height: 90vh;
   background: $gris-fondo;
 
+  &__fantasma{
+    height: 14vh;
+  }
+
   &__izquierda{
     display: flex;
     flex-direction: column;
@@ -1347,6 +1359,7 @@ color: #707070;
     height: 13em;
     width: 90%;
     display: flex;
+    
     margin: 0 0 2em 0 ;
     border-bottom: solid 1px white;
   }
