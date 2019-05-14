@@ -13,20 +13,81 @@
 
 </head>
 <body>
-
+<div class="app__fixed">
     <nav class="app__navegacion" id="nav-bar">
         <ul class="app__lista-nav">
            <li class="app__item-navegacion app__item-navegacion--carrito"><i class="fas fa-reply-all"></i></li>
 
-                    <li class="app__item-navegacion app__item-navegacion--titulo">CECKOUT</li>
+                    <li class="app__item-navegacion app__item-navegacion--titulo">CHECKOUT</li>
 
                     <li class="app__item-navegacion app__item-navegacion--carrito"> <i class="app__carrito" data-feather="shopping-cart"></i></li>
         </ul>
     </nav>
+</div>
     
-    <div class="carrito">
+  <div class="form">
+        <div class="form__inputs">
+            <p class="form__titulos">E-mail</p>
+        <input placeholder="ejemplo@mail.com" class="form__email  form__item" type="text">
+
+        <p class="form__titulos">País</p>
+        <input  placeholder="País" class="form__pais  form__item" type="text">
+        <p class="form__titulos">Ciudad</p>
+        <input  placeholder="Ciudad" class="form__ciudad  form__item" type="text">
+  
+        <p class="form__titulos">Direccion</p>
+        <select placeholder="calle o carrera" class="form__tipo  form__item">
+            <option value="Calle">calle</option>
+            <option value="Carrera">carrera</option>
+        </select>
+            
+        </select>
+        <input  placeholder="Numero de calle o carrera" class="form__cll-cr  form__item" type="text">
+        <p class="form__num">#  </p>
+        <input  placeholder="Numero" class="form__numero form__item"  type="text">
+        <p class="form__titulos">Comentarios adicionales</p>
+        <textarea rows="50" cols="30" placeholder="Comentarios" class="form__comentarios form__item">  </textarea>
+
+        <h2 class="form__metodo">METODO DE PAGO</h2>
+
+        <p class="form__titulos"></p>
+        <div class="form__pago"> <p>Tarjea C</p> <i class=
+        "fas fa-money-bill"></i> <input type="checkbox"></div>
+        
+        <p class="form__titulos"></p>
+        
+        <div class="form__pago"> <p>Efectivo</p> <i class="fas fa-credit-card"></i> <input type="checkbox"></div>
+
+        </div>
+
+
+
+
+        <div class="carrito__derecha">
+            <div>
+            <div class="carrito__derecha-contenido">
+                
+                <ul class="carrito__resumen">
+
+                    <li class="carrito__item-resumen carrito__item-resumen--titulo"> <p>RESUMEN DE COMPRA</p></li>
+
+                    <li class="carrito__item-resumen"><p>Subtotal</p> <p>Subtotal</p></li>
+
+                    <li class="carrito__item-resumen carrito__item-resumen--produc"><p>Envio</p> <p>Envio</p></li>
+
+                    <li class="carrito__item-resumen"><p>Total</p> <p>Total</p></li>
+
+                </ul>
+            
+                <button class="carrito__btn-comprar">COMPRAR</button>
+                
+            </div>
+            </div>
+        </div>
+     
         
     </div>
+
 
 
 

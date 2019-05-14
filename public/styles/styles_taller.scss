@@ -36,6 +36,10 @@ body{
     flex-direction: column;
 
 
+    &__fixed{
+      position: fixed;
+      width: 100%;
+    }
 
     &__header{
         display: flex;
@@ -134,9 +138,11 @@ body{
 
         height: 10vh;
         width: 100%;
+        background-color: #0096c4;
         background-color: $gris-osccuro;
         justify-content: center;
         z-index: 100;
+        display: flex;
 
         
     }
@@ -150,7 +156,8 @@ body{
     &__lista-nav{
         height: 100%;
         display: flex;
-        justify-content: space-around;   
+        width: 100%;
+        justify-content: space-between;   
         margin-right: 10%;
         align-items: center;
         align-content: center;
@@ -1031,6 +1038,10 @@ margin-top: 5vh;
   height: auto;
   flex-direction: column;
 
+  &__fantasma{
+    height: 10vh;
+  }
+
   &__barra{
     height: 10%;
     display: flex;
@@ -1057,7 +1068,8 @@ margin-top: 5vh;
  
   &__lista{
     list-style-type: none;
-    margin: -1em 1em 0 1em;
+    padding: 1em;
+    margin: -3  em 1em 0 1em;
   }
 
   &__item1{
@@ -1081,9 +1093,11 @@ margin-top: 5vh;
 .productos{
   display: flex;
   width: 75%;
-  height: auto;
+  height: 10vh;
   flex-direction: column;
   flex-wrap: wrap;
+  
+  padding: 0 0 20em 0;
 }
 
 .filtro1{
@@ -1136,6 +1150,9 @@ margin: 1em 6%  -1em 6%;
   margin: 4% 0 0 4%;
   align-items: center;
 
+  &__fantasma{
+    width: 25%;
+  }
 
   &:hover{
     cursor: pointer;
@@ -1475,6 +1492,82 @@ color: #707070;
   }
 
 }
+
+
+//Formulariooooooooooooooooooooooooooooooooooo
+
+.form{
+  display: flex;
+  flex-direction: row;
+  padding-top: 4.5em;
+  width: 100%;
+  background: $azul-principal;
+  height: 90vh;
+  background: $gris-fondo;
+
+  &__inputs{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 90vh;
+    padding:  2em 4em;
+    flex-wrap: wrap;
+
+  }
+
+  &__item{
+    margin-bottom: 2em;
+    height: 2em;
+    margin-right: 2em;
+    width: 80%;
+    
+  }
+
+  &__pais{
+    width: 80%;
+  }
+  &__ciudas{
+    width: 45%;
+  };
+   &__tipo{
+     width: 15%;
+   }
+   &__cll-cr{
+     width: 30%;
+   }
+   &__numero{
+     width: 21%;;
+   }
+   &__num{
+     margin-right: .3em;
+     font-size: 2em;
+     margin-top: -.3em;
+   }
+   &__comentarios{
+     height: 6em;
+   }
+  
+   &__titulos{
+     width: 100%;
+   }
+   &__metodo{
+     margin: 0 0 1em 0;
+   }
+   &__pago{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 50%;
+   }
+
+
+}
+
+
+
+
+
 
 
 

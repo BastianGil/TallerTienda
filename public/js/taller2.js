@@ -13,7 +13,7 @@ window.addEventListener("load" , function(){
     var tienda_agregar = document.querySelectorAll(".mas-tienda");
     var detalles_agregar = document.querySelectorAll(".mas-detalles");
     var num__productos = document.querySelector(".app__NoProducto");
-
+    var listaCarrito=document.querySelector(".carrito__izquierda");
 
     function actualizarCarrito(){
         if(num__productos!=null){
@@ -26,7 +26,6 @@ window.addEventListener("load" , function(){
     //Funcion que recorre los botones
     function tiendaBotones (btn){
         
-
         btn.addEventListener("click" , function(){ 
             var padre = btn.parentNode.parentNode;
             var nombre=  padre.querySelector(".nombre").value;

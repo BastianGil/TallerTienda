@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
-
+<div class="app__fixed">
     <section class="tienda">
             <nav class="app__navegacion" id="nav-bar">
                 <ul class="app__lista-nav">
@@ -26,8 +26,13 @@
 
                 </ul>
             </nav>
+</div>
+<div class="tienda__fantasma"></div>
 <div class="tienda__contenido">
 
+
+
+<div class="app__fixed">
     <div class="filtros">
         <ul class="filtros__lista">
 
@@ -70,7 +75,9 @@
 
         </ul>
     </div>
+</div>
 
+<div class="producto__fantasma"></div>
 <div class="productos">
 
     <div class="juegos">
@@ -81,7 +88,6 @@
             <button class="filtro1__tipo" onclick="location.href='/tienda/Mandos/';">Mando</button>
             <button class="filtro1__tipo" onclick="location.href='/tienda/Consolas/';">Consola</button>
         </div>
-
 
     {{#each listaProductos}}
                 <div class="producto" >
