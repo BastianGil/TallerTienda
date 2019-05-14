@@ -21,7 +21,7 @@
 
                     <li class="app__item-navegacion app__item-navegacion--titulo">{{nombre}}</li>
 
-                    <li class="app__item-navegacion app__item-navegacion--carrito"> <i class="app__carrito" data-feather="shopping-cart"></i></li>
+                    <li class="app__item-navegacion app__item-navegacion--carrito"> <i class="app__carrito" data-feather="shopping-cart"></i> <p class="app__NoProducto"></p></li>
                     
                 </ul>
                 </nav>
@@ -36,23 +36,24 @@
         <div class="descripcion__detalles">     
             <div class="descripcion__nombre-categoria">
                 <div class="descripcion__nombre">
-                    <h1>{{nombre}}</h1>
+                    <h1 class="detalles__nombre">{{nombre}}</h1>
                 </div>
                 <div class="descripcion__categ">
                     <h1><i class="fas fa-gamepad"></i> {{categoria}}</h1>
                 </div>
                    </div>
                 <div class="descripcion__precio">
-                    <h2>${{precio}}</h2> 
+                    <h2 class="detalles__precio">${{precio}}</h2> 
                     
                         <h2><i class="fas fa-street-view"></i>
 
  +{{clasificacion}}</h2>
                 </div>
+
                      <div class="descripcion__iconos">
                          <div>
 <i class="far fa-heart producto__corazon producto__icons"></i>
-<i class="fas fa-plus producto__mas  producto__icons"></i>
+<i class="fas fa-plus producto__mas mas-detalles  producto__icons"></i>
                         </div>
                     </div>
                     <div class="descripcion__desc"> 
@@ -60,6 +61,7 @@
                         <p>{{descripcion}}</p>
                     </div>
         </div>
+        <input class="detalles__categoria" type="hidden" value="{{categoria}}">
     </div>
 
 
