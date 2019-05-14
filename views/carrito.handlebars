@@ -16,11 +16,64 @@
 
     <nav class="app__navegacion" id="nav-bar">
         <ul class="app__lista-nav">
-            <li class="app__item-navegacion-logo"> <img src="/imgs/logo-gris.png" alt="" width="40vh">   </li>
-            <li class="app__item-navegacion app__item-navegacion--titulo">Carrito de compras</li>
-            <li class="app__item-navegacion"><i class="fas fa-reply-all"></i></li>
+           <li class="app__item-navegacion app__item-navegacion--carrito"><i class="fas fa-reply-all"></i></li>
+
+                    <li class="app__item-navegacion app__item-navegacion--titulo">CARRITO DE COMPRAS</li>
+
+                    <li class="app__item-navegacion app__item-navegacion--carrito"><i class="fas fa-shopping-cart"></i></li>
         </ul>
     </nav>
+    
+    <div class="carrito">
+        <div class="carrito__izquierda">
+            <div class="carrito__producto">
+                <div class="carrito__imagen" style= "background-image: url(/imgs/{{imagen}})">
+                </div>
+                
+                <div class="carrito__descripcion">
+                    <h3 class="carrito__nombre" >nombre</h3>
+                    <p>precio</p>
+                    <p>genero <i class="fas fa-gamepad"></i> </p>
+                </div>
+                
+                <div class="carrito__opciones">
+                    <i class="far fa-times-circle  carrito__eliminar" ></i>
+
+                    <div class="carrito__cantidad">
+                        <div class="carrito__menos">+</div>
+                        <div class="carrito__numero">1</div>
+                        <div class="carrito__mas">-</div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="carrito__derecha">
+            <div>
+            <div class="carrito__derecha-contenido">
+                
+                <ul class="carrito__resumen">
+
+                    <li class="carrito__item-resumen carrito__item-resumen--titulo"> <p>RESUMEN DE COMPRA</p></li>
+
+                    <li class="carrito__item-resumen"><p>Subtotal</p> <p>Subtotal</p></li>
+
+                    <li class="carrito__item-resumen carrito__item-resumen--produc"><p>Envio</p> <p>Envio</p></li>
+
+                    <li class="carrito__item-resumen"><p>Total</p> <p>Total</p></li>
+
+                </ul>
+            
+                <button class="carrito__btn-comprar">COMPRAR</button>
+                
+            </div>
+            </div>
+        </div>
+     
+        
+    </div>
 
 
 </body>

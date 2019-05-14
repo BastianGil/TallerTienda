@@ -145,6 +145,15 @@ app.get('/tienda/detalles/:detalles',function(req,res){
 
 });
 
+app.get('/carrito/', function(req, res) {
+             
+        var contexto = {
+                 
+        };
+        res.render('carrito',contexto);
+
+ });
+
 
 //3. Decirle por que puerto ecuchar  
 app.listen(3000, function(){
