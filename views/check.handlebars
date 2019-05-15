@@ -25,7 +25,7 @@
     </nav>
 </div>
     
-  <div class="form" action="/comprado" method="POST">
+  <form class="form" action="/comprado" method="POST">
         <div class="form__inputs">
             <p class="form__titulos">E-mail</p>
         <input placeholder="ejemplo@mail.com" class="form__email  form__item" type="text" name="correo">
@@ -60,8 +60,8 @@
 
         </div>
 
-
-
+    <input class="pedidos" type="hidden" name="pedidos">
+<input class="valorTotal" type="hidden" name="total">
 
         <div class="carrito__derecha">
             <div>
@@ -86,7 +86,7 @@
         </div>
      
         
-    </div>
+    </form>
 
 
 

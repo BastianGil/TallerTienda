@@ -12,6 +12,8 @@ app.set('view engine','handlebars');
 
 //1. Establecer la carpeta public como estatica
 app.use(express.static('public'));
+//Para funcionamiento POST
+app.use(express.urlencoded({extended:true}));
 
 //7. conectar base de datos de mongo
 //Mongo: crear variables (Paso 1)
@@ -167,9 +169,14 @@ app.get('/carrito/', function(req, res) {
 app.post('/comprado',function(req,res){
     var pedido={
         correo:req.body.correo,
-        
-
-
+        pais:req.body.pais,
+        ciudad:req.body.ciudad,
+        direccionPrincipal:req.body.direccionPrincipal,
+        direccionNumero:req.body.direccionNumero,
+        direccionSecundaria:req.body.direccionSecundaria,
+        comentarios:req.body.comentarios,
+        valorTotal:req.body.valorTotal,
+        pedidos:JSON.parse(req.body.pedidos)
     }
 
     var pedidos=clientdb.collection('pedidos');
@@ -179,7 +186,7 @@ app.post('/comprado',function(req,res){
 
     });
 
-
+    res.redirect('/');
 });
 
 //3. Decirle por que puerto ecuchar  

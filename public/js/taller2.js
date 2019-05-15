@@ -192,5 +192,19 @@ window.addEventListener("load" , function(){
     }
 
     //Enviar pedido de productos
-   // var formulario=document.querySele
+    var formulario=document.querySelector('.form');
+    function enviarValorTotal(event){
+        var valorTotal=document.querySelector('.valorTotal');
+        valorTotal.value=totalCompra.innerText;
+    }
+    function enviarPedidos(event){
+        var pedidos=document.querySelector('.pedidos');
+        pedidos.value=localStorage.getItem('listaProductos');
+        localStorage.removeItem('listaProductos');
+    }
+    if(formulario!=null){
+        formulario.addEventListener('submit',enviarValorTotal);
+        formulario.addEventListener('submit',enviarPedidos);
+    }
+    
 });
