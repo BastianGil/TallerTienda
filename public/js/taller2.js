@@ -4,12 +4,18 @@ window.addEventListener("load" , function(){
     feather.replace();
 
     var botonCarrito = document.querySelector(".goCarrito");
+    var botonComprar=document.querySelector('.irCheck');
     function aCarrito(){
-        console.log("carritoooooooo");
         location.href='/carrito';
+    }
+    function aCheck(){
+        location.href='/checkout';
     }
     if(botonCarrito!= null){
         botonCarrito.addEventListener("click" , aCarrito);
+    }
+    if(botonComprar!= null){
+        botonComprar.addEventListener("click" , aCheck);
     }
 
     var listaProductos=[];
@@ -25,8 +31,11 @@ window.addEventListener("load" , function(){
     var detalles_agregar = document.querySelectorAll(".mas-detalles");
     var num__productos = document.querySelector(".app__NoProducto");
     var paraComprar=document.querySelector('.carrito__izquierda');
+    var totalCompra=document.querySelector('.total');
+    var subtotalCompra=document.querySelector('.subtotal');
 
     function actualizarCarrito(){
+        var suma=0;
 
         //Numero de productos en el carrito
         if(num__productos!=null){
@@ -106,8 +115,19 @@ window.addEventListener("load" , function(){
 
                 });
 
+                //Total de la compra
+                suma+= parseInt(producto.precio);
+                if(totalCompra!=null && subtotalCompra!=null){
+                subtotalCompra.innerHTML="$"+suma;
+                totalCompra.innerHTML="$"+suma;
+                }
 
         });
+
+        if(totalCompra!=null && subtotalCompra!=null){
+            totalCompra.innerHTML="$"+suma;
+            subtotalCompra.innerHTML="$"+suma;
+        }
     }
         
     actualizarCarrito();
@@ -131,7 +151,7 @@ window.addEventListener("load" , function(){
 
             listaProductos.push(producto);
             actualizarCarrito();
-            
+            console.log(producto.precio);
 
         });
     }
@@ -146,10 +166,12 @@ window.addEventListener("load" , function(){
 
         btn.addEventListener("click" , function(){ 
             var nombre=  document.querySelector(".detalles__nombre").innerHTML;
-            var precio=  document.querySelector(".detalles__precio").innerHTML;
+            var precio=  document.querySelector(".detalles__pre").value;
             var categoria=  document.querySelector(".detalles__categoria").value;
             var imagen=  document.querySelector(".descripcion__imagen").style.backgroundImage;
             var imagenUrl = imagen.replace('url(','').replace(')','');
+
+            
 
             var producto ={
                 nombre:nombre,
@@ -160,7 +182,7 @@ window.addEventListener("load" , function(){
 
             listaProductos.push(producto);
             actualizarCarrito();
-            
+            console.log(producto.precio);
 
         });
     }
