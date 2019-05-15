@@ -25,28 +25,28 @@
     </nav>
 </div>
     
-  <div class="form">
+  <div class="form" action="/comprado" method="POST">
         <div class="form__inputs">
             <p class="form__titulos">E-mail</p>
-        <input placeholder="ejemplo@mail.com" class="form__email  form__item" type="text">
+        <input placeholder="ejemplo@mail.com" class="form__email  form__item" type="text" name="correo">
 
         <p class="form__titulos">País</p>
-        <input  placeholder="País" class="form__pais  form__item" type="text">
+        <input  placeholder="País" class="form__pais  form__item" type="text" name="pais">
         <p class="form__titulos">Ciudad</p>
-        <input  placeholder="Ciudad" class="form__ciudad  form__item" type="text">
+        <input  placeholder="Ciudad" class="form__ciudad  form__item" type="text" name="ciudad">
   
         <p class="form__titulos">Direccion</p>
-        <select placeholder="calle o carrera" class="form__tipo  form__item">
+        <select placeholder="calle o carrera" class="form__tipo  form__item" name="direccionPrincipal">
             <option value="Calle">calle</option>
             <option value="Carrera">carrera</option>
         </select>
             
         </select>
-        <input  placeholder="Numero de calle o carrera" class="form__cll-cr  form__item" type="text">
+        <input  placeholder="Numero de calle o carrera" class="form__cll-cr  form__item" type="text" name="direccionNumero">
         <p class="form__num">#  </p>
-        <input  placeholder="Numero" class="form__numero form__item"  type="text">
+        <input  placeholder="Numero" class="form__numero form__item"  type="text" name="direccionSecundaria">
         <p class="form__titulos">Comentarios adicionales</p>
-        <textarea rows="50" cols="30" placeholder="Comentarios" class="form__comentarios form__item">  </textarea>
+        <textarea rows="50" cols="30" placeholder="Comentarios" class="form__comentarios form__item" name="comentarios">  </textarea>
 
         <h2 class="form__metodo">METODO DE PAGO</h2>
 

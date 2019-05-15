@@ -163,6 +163,25 @@ app.get('/carrito/', function(req, res) {
     
 });
 
+//Ruta POST
+app.post('/comprado',function(req,res){
+    var pedido={
+        correo:req.body.correo,
+        
+
+
+    }
+
+    var pedidos=clientdb.collection('pedidos');
+    pedidos.insertOne(pedido,function(err){
+        assert.equal(err,null);
+        console.log("Se guardo el pedido");
+
+    });
+
+
+});
+
 //3. Decirle por que puerto ecuchar  
 app.listen(3000, function(){
 console.log('Holi servidor');

@@ -190,4 +190,7 @@ window.addEventListener("load" , function(){
     if(detalles_agregar!=null){
     detalles_agregar.forEach(detallesBotones);
     }
+
+    //Enviar pedido de productos
+   // var formulario=document.querySele
 });
