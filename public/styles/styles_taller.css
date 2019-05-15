@@ -1589,7 +1589,6 @@ span {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60%;
-  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1649,17 +1648,18 @@ span {
 }
 
 .carrito__cantidad {
-  color: white;
-  font-size: 1.6em;
-  padding: 0 .5em 0 .5em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  color: white;
+  font-size: 1.6em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: space-between;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1674,7 +1674,9 @@ span {
 .carrito__imagen {
   width: 20%;
   height: 11em;
-  background-color: #ffffff;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .carrito__derecha {
@@ -1769,12 +1771,13 @@ span {
 
 .carrito__mas {
   color: white;
-  margin: 0 -.4em 0 0;
-  width: 1.5em;
-  height: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   border-radius: 30px;
   font-size: 1.6em;
-  padding: 0 .4em 0.2em;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -1785,17 +1788,16 @@ span {
   background-color: white;
 }
 
-.carrito__numero {
-  margin: 0 .2em 0 .2em;
-}
-
 .carrito__menos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: white;
-  margin: 0 0 0 -.4em;
-  width: 1.5em;
+  width: 2em;
   border-radius: 30px;
   font-size: 1.6em;
-  padding: 0 .2em 0 .4em;
   -webkit-transition: .5s;
   transition: .5s;
 }
