@@ -186,7 +186,7 @@ app.post('/comprado',function(req,res){
 
     });
 
-    res.redirect('/');
+    res.redirect('/tienda/Juegos');
 });
 
 //3. Decirle por que puerto ecuchar  
