@@ -98,8 +98,11 @@ window.addEventListener("load" , function(){
 
 
                 //Eliminar del carrito
-                carrito__eliminarN.addEventListener('clickk',function(){
+                carrito__eliminarN.addEventListener('click',function(){
+                    listaProductos.splice(index,1);
+                    carrito__productoN.remove();
 
+                    actualizarCarrito();
 
                 });
 
