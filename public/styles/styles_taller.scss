@@ -3,6 +3,7 @@ $rojo-principal: #ec0235;
 $azul-principal: #0096c4;
 $gris-filtros: #696969;
 $gris-osccuro: #27282C;
+$gris-fondo:rgb(27, 28, 31);
 $titulos: 'Fjalla One', sans-serif;
 $texto:'Source Code Pro', monospace;
 $texto-tienda: 'Muli', sans-serif;
@@ -20,7 +21,7 @@ html{
 body{
   font-family: $texto;
   height: 100%;
-  background-color: black;
+  background-color:rgb(27, 28, 31);
 }
 
 .parallax-mirror{
@@ -35,6 +36,16 @@ body{
     flex-direction: column;
 
 
+    &__fixed{
+      position: fixed;
+      width: 100%;
+      z-index: 0;
+    }
+    &__fixed1{
+      position: fixed;
+      width: 100%;
+      z-index: 0;
+    }
 
     &__header{
         display: flex;
@@ -132,11 +143,14 @@ body{
     &__navegacion{
 
         height: 10vh;
+        width: 100%;
+        background-color: #0096c4;
         background-color: $gris-osccuro;
-        justify-content: center;
-        z-index: 100;
+        justify-content: center;  
+        display: flex;
+        
 
-
+        
     }
 
     &__fijo {
@@ -146,13 +160,27 @@ body{
       }
 
     &__lista-nav{
+      z-index: 30;    
         height: 100%;
         display: flex;
-        justify-content: space-around;   
+        width: 100%;
+        justify-content: space-between;   
         margin-right: 10%;
         align-items: center;
         align-content: center;
-    }
+
+        &--tit{
+          justify-content: space-between;
+          padding: 7px 0 0 0; 
+          margin: 0;
+        }
+    
+      }
+
+      &__carrito{
+        font-size: 20px;
+        margin-top: 10px;
+      }
 
     &__item-navegacion{
         list-style-type: none;
@@ -161,7 +189,27 @@ body{
         position: relative;
         padding-bottom: 3px;
         color: #898989;
+        &--titulo{
+          font-size: 2em;
+          color: #d8d8d8;          
+        }
+        &--carrito{
+          font-size: 1em;
+          display:flex;
+        }
+       
     }
+    &__NoProducto{
+      font-size: .8em;
+      color: white;
+      display: flex;
+      align-items: center;
+      background-color: $rojo-principal;
+      border-radius: 20px;
+      margin: .4em 0em .4em 0 ;
+      padding: 0 .3em 0 .3em;
+    }
+
     
     &__item-navegacion:after {
         content: '';
@@ -1009,6 +1057,10 @@ margin-top: 5vh;
   height: auto;
   flex-direction: column;
 
+  &__fantasma{
+    height: 10vh;
+  }
+
   &__barra{
     height: 10%;
     display: flex;
@@ -1018,24 +1070,30 @@ margin-top: 5vh;
   }
   &__contenido{
     flex-basis: auto;
-    height: auto;
+    height: 90vh;
     background-color: rgb(206, 206, 206);
     width: 100%;
     display: flex;
+    
   }
 
-
+.flex-fixed{
+  display: flex;
+  flex-direction: column;
+  
+}
 
 }
 
 .filtros{
   width: 25%;
-  height: auto;
-  background-color:rgb(27, 28, 31);
+  height: 100vh;
+  background-color:$gris-fondo ;
  
   &__lista{
     list-style-type: none;
-    margin: -1em 1em 0 1em;
+    padding: 1em;
+    margin: -3  em 1em 0 1em;
   }
 
   &__item1{
@@ -1043,8 +1101,8 @@ margin-top: 5vh;
     justify-content: space-between;
     font-size: 1.3em;
     margin: 2em 0 0 0;
-
   }
+  
   &__item2{
     padding: .5em 0 0 0;
     display: flex;
@@ -1059,7 +1117,7 @@ margin-top: 5vh;
 .productos{
   display: flex;
   width: 75%;
-  height: auto;
+  height: 100vh;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -1100,20 +1158,24 @@ margin: 1em 6%  -1em 6%;
   flex-direction: row;
   background-color: rgb(206, 206, 206);
   flex-wrap: wrap; 
-  margin: -0 0 2em 0; 
-
+  padding: 0 0 10em 0;
+  z-index: 1;
+  
 }
 
 .producto{
 
   width: 44%;
-  height: 18em;
+  height: 20em;
   display: flex;
   flex-direction: column;
   background-color: #f1f1f1;
   margin: 4% 0 0 4%;
   align-items: center;
 
+  &__fantasma{
+    width: 25%;
+  }
 
   &:hover{
     cursor: pointer;
@@ -1163,6 +1225,7 @@ margin: 1em 6%  -1em 6%;
       width: 90%;
      // background-color: #0096c4;
   }
+
   &__titulo{
     padding: 10px;
     width: 50%;
@@ -1181,8 +1244,7 @@ margin: 1em 6%  -1em 6%;
         display:flex;
         flex-direction: column;
         text-align: right;
-        align-items: flex-end;
-        
+        align-items: flex-end;     
     //background-color: #c4005c;
     }
   
@@ -1198,6 +1260,11 @@ margin: 1em 6%  -1em 6%;
   color: $gris-principal;
 }
 
+&__icons{
+  padding: 10px;
+}
+
+
 }
 
 .descripcion{
@@ -1205,6 +1272,11 @@ display: flex;
 width: 100%;
 height: 90VH;
 background-color: rgb(206, 206, 206);
+color: #707070;
+
+&__desc{
+  color: #141414;
+}
 
 &__img{
   padding: 2em 0 0 0;
@@ -1224,19 +1296,307 @@ background-color: rgb(206, 206, 206);
 
 &__detalles{
   
-  padding: 2em 0 0 0;
+  padding: 2em 4em 0 0;
   display: flex;
   flex-direction: column;
   width: 60%;
   height: 90vh;
   background-color: rgb(206, 206, 206);
+  margin: 0 0 0 -5em ;
+}
+
+
+&__nombre-categoria{
+  color: #141414;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  margin: 0 0 1em 0;
+}
+
+&__categ{
+  color: #707070;
+}
+
+&__precio{
+  
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  margin: 0 0 .6em 0;
+}
+
+&__iconos{
+  font-size: 1em;
+  margin: 0 0 1em 0;
 }
 
 &__likes{
-  margin: 1em 0 0 7em;
+  margin: 1em 0 0 8.3em;
   color: $gris-filtros;
 }
 }
+
+
+// carrito de cooooooooooompraaaaas
+
+.carrito{
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: $gris-fondo;
+
+  &__fantasma{
+    height: 14vh;
+  }
+
+  &__izquierda{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    align-items: center;
+    padding: 2em 2em 0 2em ;
+  }
+  
+  &__producto{
+    height: 13em;
+    width: 90%;
+    display: flex;
+    
+    margin: 0 0 2em 0 ;
+    border-bottom: solid 1px white;
+  }
+
+  &__descripcion{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 85%;
+    color: white;
+    justify-content: space-between;
+    font-size: 1.3em;
+    padding: 0em 2em .5em 1em;
+  }
+
+  &__opciones{
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 11em;
+    color: white;
+    justify-content: space-between;
+
+  }
+
+  &__eliminar{
+    font-size: 2.5em;
+    color: $azul-principal;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__cantidad{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.6em;
+ //   padding: 0 .5em 0 .5em;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 6em;
+    height: 2em;
+    border-radius: 30px;
+    border: solid 3px white;
+  }
+
+  &__imagen{
+    width: 20%;
+    height: 11em;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__derecha{
+    padding: 2em 2em 2em 0;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+    justify-content: first baseline;
+  }
+
+  &__derecha-contenido{
+    align-items: center;  
+    position: fixed;
+    justify-content: space-between;
+    padding: 1.5em 2em 2.5em 2em;
+    display: flex;
+    flex-direction: column;
+    width: 28em;
+    height: 75vh;
+    background-color:$gris-osccuro;
+  }
+  
+  &__resumen{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 85%;
+    justify-content: space-between;
+
+    padding: 0 2em 2em 0;
+  }
+
+  &__item-resumen{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    font-size: 1.4em;
+
+    &--produc{
+      border-bottom: solid 1px white;
+      padding: 0 0 1.5em 0;
+    }
+    &--titulo{
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+  }
+
+  &__btn-comprar{
+    
+    font-size: 1.2em;
+    width: 8em;
+    height: 2em;
+    color: white;
+    background-color: $azul-principal;
+    border-radius: 30px;
+    border: 0px;
+    padding: 0 0 0 0;
+
+  }
+
+  &__mas{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30px;
+    font-size: 1.6em;
+    transition: .5s;
+
+    &:hover{
+      
+      cursor: pointer;
+      color: $gris-fondo;
+      background-color: white;
+    }
+
+
+  }
+
+  &__menos{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 2em;
+    border-radius: 30px;
+    font-size: 1.6em;
+    transition: .5s;
+
+    &:hover{
+      cursor: pointer;
+      color: $gris-fondo;
+      background-color: white;
+    }
+  }
+
+}
+
+
+//Formulariooooooooooooooooooooooooooooooooooo
+
+.form{
+  display: flex;
+  flex-direction: row;
+  padding-top: 4.5em;
+  width: 100%;
+  background: $azul-principal;
+  height: 90vh;
+  background: $gris-fondo;
+
+  &__inputs{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 90vh;
+    padding:  2em 4em;
+    flex-wrap: wrap;
+
+  }
+
+  &__item{
+    margin-bottom: 2em;
+    height: 2em;
+    margin-right: 2em;
+    width: 80%;
+    
+  }
+
+  &__pais{
+    width: 80%;
+  }
+  &__ciudas{
+    width: 45%;
+  };
+   &__tipo{
+     width: 15%;
+   }
+   &__cll-cr{
+     width: 30%;
+   }
+   &__numero{
+     width: 21%;;
+   }
+   &__num{
+     margin-right: .3em;
+     font-size: 2em;
+     margin-top: -.3em;
+   }
+   &__comentarios{
+     height: 6em;
+   }
+  
+   &__titulos{
+     width: 100%;
+   }
+   &__metodo{
+     margin: 0 0 1em 0;
+   }
+   &__pago{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 50%;
+   }
+
+
+}
+
+
+
+
+
 
 
 
@@ -1596,4 +1956,426 @@ width: 100%;
 width: 100%;
 }
 }
+
+
+//Detalleeeeeeeeeeeeeeeeeeeeeeeess
+
+.descripcion{
+  display: flex;
+  width: 100%;
+  height: 90VH;
+  background-color: rgb(206, 206, 206);
+  color: #707070;
+  font-size: .5em;
+  flex-direction: column;
+  
+  &__img{
+    padding: 2em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 40%;
+    margin: -2em 0 0 3em;
+  }
+  
+  &__imagen{
+    height: 70vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &__detalles{
+    padding: 2em 15em 8em 8em;
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+    height: 110vh;
+    background-color: rgb(206, 206, 206);
+   
+  }
+  
+  
+  &__descripcion{
+    font-size: 2em;
+  }
+
+  &__nombre-categoria{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15vh;
+    margin: 0 0 1em 0;
+  }
+  
+  &__categ{
+    color: #707070;
+  }
+  
+  &__precio{
+    
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 0 .6em 0;
+  }
+  
+  &__iconos{
+    font-size: 1em;
+    margin: 0 0 1em 0;
+  }
+  
+  &__likes{
+    margin: -4em 0 0 0em;
+    color: $gris-filtros;
+  }
+  }
+
+
+// carrito de cooooooooooompraaaaas
+
+.carrito{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  background: $gris-fondo;
+
+  &__fantasma{
+    height: 14vh;
+  }
+
+  &__izquierda{
+    width: 100%;
+  }
+  
+  &__producto{
+    width: 90%;
+  }
+
+
+
+  &__cantidad{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.6em;
+ //   padding: 0 .5em 0 .5em;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 6em;
+    height: 2em;
+    border-radius: 30px;
+    border: solid 3px white;
+  }
+
+  &__imagen{
+    width: 20%;
+    height: 11em;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
+  &__derecha{
+
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    
+    padding: 2em;
+  }
+
+  &__derecha-contenido{
+    align-self: center;
+    position: static;
+    align-items: center;  
+    justify-content: center;
+   
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  &__mas{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30px;
+    font-size: 1.6em;
+    transition: .5s;
+
+    &:hover{
+      
+      cursor: pointer;
+      color: $gris-fondo;
+      background-color: white;
+    }
+
+
+  }
+
+  &__menos{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 2em;
+    border-radius: 30px;
+    font-size: 1.6em;
+    transition: .5s;
+
+    &:hover{
+      cursor: pointer;
+      color: $gris-fondo;
+      background-color: white;
+    }
+  }
+  
+}
+.ccompra{
+  font-size: 1em;
+}
+
+
+
+
+
+//Formulariooooooooooooooooooooooooooooo
+.form{
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.5em;
+  width: 100%;
+  background: $azul-principal;
+  height: 90vh;
+  background: $gris-fondo;
+
+  &__inputs{
+
+    width: 100%;
+   margin-bottom: 3em;
+
+  }
+
+}
+
+
+
+//Tiendaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+
+.tienda{
+  font-family: $texto-tienda;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+
+  &__fantasma{
+    height: 10vh;
+  }
+
+  &__barra{
+    height: 10%;
+    display: flex;
+    width: 100%;
+    flex-basis: 10%;
+    background-color: $gris-principal;
+  }
+  &__contenido{
+    flex-basis: auto;
+    height: 90vh;
+    background-color: rgb(206, 206, 206);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+}
+
+.filtros{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+ 
+  &__lista{
+    list-style-type: none;
+    padding: 1em;
+    margin: -3  em 1em 0 1em;
+  }
+
+  &__item1{
+    color: white;
+    justify-content: space-between;
+    font-size: 1.3em;
+    margin: 2em 0 0 0;
+  }
+  
+  &__item2{
+    padding: .5em 0 0 0;
+    display: flex;
+  justify-content: space-between;
+    justify-content: space-between;
+    color: white;
+    font-size: 1em;
+    margin: 0 1em 0 2.5em;
+  }
+}
+
+.productos{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.filtro1{
+ &__tipo{
+  margin-right: 3em;
+}
+
+}
+
+
+.juegos{
+  display: flex;
+  width:100%;
+  height: auto;
+  flex-direction: column;
+  background-color: rgb(206, 206, 206);
+  flex-wrap: wrap; 
+  padding: 0 0 10em 0;
+  z-index: 1;
+  
+}
+
+.producto{
+
+  width: 92%;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  margin: 4% 0 0 4%;
+  align-items: center;
+
+  &__fantasma{
+    width: 25%;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+  &__corazon{
+    color: white;
+    font-size: 1.9em;
+    background-color: $azul-principal;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  &__mas{
+    color: white;
+    font-size: 1.9em;
+    background-color: $gris-principal;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  
+  &__iconos{
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    padding: 5px;
+    width: 100%;    
+   // background-color: #ec0235;
+    justify-content: space-between;
+   
+  }
+  &__img{
+    margin: -20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    height: 24em;
+    padding: 5px;
+    width: 90%; 
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+  }
+  &__info{
+    margin: 20px 0 0 0;
+   border-top: solid 1px #bbbbbb;
+      display: flex;
+      height: 7em;
+      width: 90%;
+     // background-color: #0096c4;
+  }
+
+  &__titulo{
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+     // background-color: #27282C;
+  }
+
+  &__valor{
+    padding: 10px;
+      width: 50%;
+      height: 100%;
+        display:flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;     
+    //background-color: #c4005c;
+    }
+  
+
+  &__estadisticas{
+    display: flex;
+    height: 3em;
+    width: 90%;
+    //background-color: #c4005c;
+}
+
+&__texto{
+  color: $gris-principal;
+}
+
+&__icons{
+  padding: 10px;
+}
+
+
+}
+
+
+.app{
+  &__fixed{
+    position: static;
+    width: 100%;
+    height: 88vh;
+
+  }
+}
+
+
 }

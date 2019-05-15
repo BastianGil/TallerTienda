@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Producto</title>
+    <link rel="stylesheet" href="/styles/styles_taller.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="app__fixed">
+    <nav class="app__navegacion" id="nav-bar">
+        <ul class="app__lista-nav">
+           <li class="app__item-navegacion app__item-navegacion--carrito"><i class="fas fa-reply-all"></i></li>
+
+                    <li class="app__item-navegacion app__item-navegacion--titulo ccompra">CARRITO DE COMPRAS</li>
+
+                    <li class="app__item-navegacion app__item-navegacion--carrito goCarrito"> <i class="app__carrito" data-feather="shopping-cart"></i><p class="app__NoProducto"></p></li>
+        </ul>
+    </nav>
+</div>
+<div class="carrito__fantasma"></div>
+    
+    <div class="carrito">
+        <div class="carrito__izquierda">
+            <div class="carrito__producto">
+                <div class="carrito__imagen" >
+                </div>
+                
+                <div class="carrito__descripcion">
+                    <h3 class="carrito__nombre" >nombre</h3>
+                    <p class="carrito__precio">precio</p>
+                    <p class="carrito__categoria">genero <i class="fas fa-gamepad carrito__game"></i> </p>
+                </div>
+                
+                <div class="carrito__opciones">
+                    <i class="far fa-times-circle  carrito__eliminar" ></i>
+
+                    <div class="carrito__cantidad">
+                        
+                        <p class="carrito__menos">-</p>
+                        <p class="carrito__numero">1</p>
+                        <p class="carrito__mas">+</p>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="carrito__derecha">
+            <div>
+            <div class="carrito__derecha-contenido">
+                
+                <ul class="carrito__resumen">
+
+                    <li class="carrito__item-resumen carrito__item-resumen--titulo"> <p>RESUMEN DE COMPRA</p></li>
+
+                    <li class="carrito__item-resumen"><p>Subtotal</p> <p class="subtotal"></p></li>
+
+                    <li class="carrito__item-resumen carrito__item-resumen--produc"><p>Envio</p> <p>GRATIS</p></li>
+
+                    <li class="carrito__item-resumen"><p>Total</p> <p class="total"></p></li>
+
+                </ul>
+            
+                <button class="carrito__btn-comprar irCheck">COMPRAR</button>
+                
+            </div>
+            </div>
+        </div>
+     
+        
+    </div>
+
+
+
+    <script src="/js/taller2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>       
+
+
+</body>
+</html>

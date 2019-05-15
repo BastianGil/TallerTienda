@@ -15,13 +15,14 @@
 <body>
 
   <nav class="app__navegacion" id="nav-bar">
-                        <ul class="app__lista-nav">
+                <ul class="app__lista-nav">
 
-                    <li class="app__item-navegacion-logo"> <img src="/imgs/logo-gris.png" alt="" width="40vh">   </li>
+                       <li class="app__item-navegacion app__item-navegacion--carrito"><i class="fas fa-reply-all"></i></li>
 
-                    <li class="app__item-navegacion">{{nombre}}</li>
+                    <li class="app__item-navegacion app__item-navegacion--titulo">{{nombre}}</li>
 
-                    <li class="app__item-navegacion"><i class="fas fa-reply-all"></i></li>
+                    <li class="app__item-navegacion app__item-navegacion--carrito goCarrito"> <i class="app__carrito" data-feather="shopping-cart"></i> <p class="app__NoProducto"></p></li>
+                    
                 </ul>
                 </nav>
 
@@ -33,17 +34,39 @@
 
         </div>
         <div class="descripcion__detalles">     
-                    <h1>{{nombre}}</h1>
-                    <h2>${{precio}}</h2>
+            <div class="descripcion__nombre-categoria">
+                <div class="descripcion__nombre">
+                    <h1 class="detalles__nombre">{{nombre}}</h1>
+                </div>
+                <div class="descripcion__categ">
+                    <h1><i class="fas fa-gamepad"></i> {{categoria}}</h1>
+                </div>
+                   </div>
+                <div class="descripcion__precio">
+                   <h2 class="detalles__precio">${{precio}}</h2> 
+                    
+                        <h2><i class="fas fa-street-view"></i>
+
+ +{{clasificacion}}</h2>
+                </div>
+
                      <div class="descripcion__iconos">
-<i class="far fa-heart producto__corazon"></i>
-<i class="fas fa-plus producto__mas"></i>
+                         <div>
+<i class="far fa-heart producto__corazon producto__icons"></i>
+<i class="fas fa-plus producto__mas mas-detalles  producto__icons"></i>
+                        </div>
                     </div>
-                    <h1 class="descripccion__titulo-detalles">Descripcción</h1>
-                    <p>{{descripcion}}</p>
+                    <div class="descripcion__desc"> 
+                        <h1 class="descripcion__titulo-detalles">Descripcción</h1>
+                        <p class="descripcion__descripcion">{{descripcion}}</p>
+                    </div>
         </div>
+        <input class="detalles__categoria" type="hidden" value="{{categoria}}">
+        <input class="detalles__pre" type="hidden" value="{{precio}}">
     </div>
 
 
+    <script src="/js/taller2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>  
 </body>
 </html>

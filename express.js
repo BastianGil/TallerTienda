@@ -12,6 +12,8 @@ app.set('view engine','handlebars');
 
 //1. Establecer la carpeta public como estatica
 app.use(express.static('public'));
+//Para funcionamiento POST
+app.use(express.urlencoded({extended:true}));
 
 //7. conectar base de datos de mongo
 //Mongo: crear variables (Paso 1)
@@ -50,34 +52,6 @@ productos.push({
 
 });
 
-productos.push({
-
-    ref: 'p2',
-    nombre: 'Kirby',
-    imagen: 'inkirby.png',
-    descripcion: 'lorem fvrvrvrv',
-    precio: '800'
-
-});
-
-productos.push({
-
-    ref: 'p3',
-    nombre: 'Kirby',
-    imagen: 'inkirby.png',
-    descripcion: 'lorem fvrvrvrv',
-    precio: '800'
-
-});
-productos.push({
-
-    ref: 'p4',
-    nombre: 'Kirby',
-    imagen: 'inkirby.png',
-    descripcion: 'lorem fvrvrvrv',
-    precio: '800'
-
-});
 
 //4. Ruta de la tienda
 
@@ -90,6 +64,7 @@ app.get('/tienda/', function(req, res) {
               
         var contexto = {
             listaProductos: docs,
+            
            
         };
         res.render('tienda',contexto);
@@ -97,25 +72,61 @@ app.get('/tienda/', function(req, res) {
  
  });
 
- //Ruta filtros
-app.get('/tienda/:categoria', function(req, res) {
+ 
+ //Ruta filtros1
+app.get('/tienda/:tipo?', function(req, res) {
+
+
+    console.log(req.params.tipo);
+
+    var query={};
+    if(req.params.tipo){
+        query.tipo= req.params.tipo;
+    }
+
+    if(req.query.clasificacion){
+        query.clasificacion= req.query.clasificacion;
+    }
+
+    if(req.query.categoria){
+        query.categoria= req.query.categoria;
+    }
+
+    if(req.query.color){
+        query.color= req.query.color;
+    }
 
 
     var juegos = clientdb.collection('juegos');
-    juegos.find({ categoria: req.params.categoria })
+
+    juegos.find(query)
+    
              .toArray(function(err, docs) {
-        var contexto = {
+        
+                var contexto = {
             listaProductos: docs,
+            tipo: req.params.tipo,
+            color: req.params.color,
+            esJuegos: req.params.tipo == "Juegos",
+            esMandos: req.params.tipo == "Mandos",
+            esConsolas: req.params.tipo == "Consolas",
+            
           
         };
+       // console.log(docs);
+       
+       console.log(contexto.esJuegos);
+
         res.render('tienda',contexto);
     });
  
 });
 
 
+
+
 //6. Ruta dinamica del producto
-app.get('/tienda/juegos/:detalles',function(req,res){
+app.get('/tienda/detalles/:detalles',function(req,res){
 
   
     var contexto=null;
@@ -144,6 +155,47 @@ app.get('/tienda/juegos/:detalles',function(req,res){
 
 });
 
+app.get('/carrito/', function(req, res) {
+             
+        var contexto = {
+                 
+        };
+        res.render('carrito',contexto);
+
+ });
+
+ app.get('/checkout/', function(req, res) {
+             
+    var contexto = {
+             
+    };
+    res.render('check',contexto);
+    
+});
+
+//Ruta POST
+app.post('/comprado',function(req,res){
+    var pedido={
+        correo:req.body.correo,
+        pais:req.body.pais,
+        ciudad:req.body.ciudad,
+        direccionPrincipal:req.body.direccionPrincipal,
+        direccionNumero:req.body.direccionNumero,
+        direccionSecundaria:req.body.direccionSecundaria,
+        comentarios:req.body.comentarios,
+        valorTotal:req.body.valorTotal,
+        pedidos:JSON.parse(req.body.pedidos)
+    }
+
+    var pedidos=clientdb.collection('pedidos');
+    pedidos.insertOne(pedido,function(err){
+        assert.equal(err,null);
+        console.log("Se guardo el pedido");
+
+    });
+
+    res.redirect('/tienda/Juegos');
+});
 
 //3. Decirle por que puerto ecuchar  
 app.listen(3000, function(){
