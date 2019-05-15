@@ -69,11 +69,23 @@
 
             {{/if}}
 
+            {{#if esMandos}}
+
             <li class="filtros__item1">COLOR</li>
-            <li class="filtros__item2">Rojo <input type="checkbox"></li>
-            <li class="filtros__item2">Negro <input type="checkbox"></li>
-            <li class="filtros__item2">Azul <input type="checkbox"></li> 
-            <li class="filtros__item2">Verde <input type="checkbox"></li>
+            <li class="filtros__item2">Rojo <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Rojo';"></li>
+            <li class="filtros__item2">Negro <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Negro';"></li>
+            <li class="filtros__item2">Azul <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Azul';"></li> 
+            <li class="filtros__item2">Verde <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Amarillo';"></li>
+            {{/if}}
+
+            {{#if esConsolas}}
+
+            <li class="filtros__item1">COLOR</li>
+            <li class="filtros__item2">Rojo <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Rojo';"></li>
+            <li class="filtros__item2">Negro <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Negro';"></li>
+            <li class="filtros__item2">Azul <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Azul';"></li> 
+            <li class="filtros__item2">Verde <input type="checkbox"  onclick="location.href='/tienda/Mandos/?color=Amarillo';"></li>
+            {{/if}}
 
         </ul>
     </div>

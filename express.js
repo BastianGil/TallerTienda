@@ -92,6 +92,10 @@ app.get('/tienda/:tipo?', function(req, res) {
         query.categoria= req.query.categoria;
     }
 
+    if(req.query.color){
+        query.color= req.query.color;
+    }
+
 
     var juegos = clientdb.collection('juegos');
 
@@ -102,7 +106,11 @@ app.get('/tienda/:tipo?', function(req, res) {
                 var contexto = {
             listaProductos: docs,
             tipo: req.params.tipo,
+            color: req.params.color,
             esJuegos: req.params.tipo == "Juegos",
+            esMandos: req.params.tipo == "Mandos",
+            esConsolas: req.params.tipo == "Consolas",
+            
           
         };
        // console.log(docs);
